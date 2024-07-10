@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\TWashio\\KB\\KB13829-IgbGrid-Group\\KB13829_IgbGrid_Group\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\KB13829_IgbGrid_Group.bundle.scp.css",
+      "PackagePath": "staticwebassets\\KB13829_IgbGrid_Group.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\TWashio\\KB\\KB13829-IgbGrid-Group\\KB13829_IgbGrid_Group\\wwwroot\\css\\blazor-ui.css",
+      "PackagePath": "staticwebassets\\css\\blazor-ui.css"
+    },
+    {
+      "Id": "C:\\Users\\TWashio\\KB\\KB13829-IgbGrid-Group\\KB13829_IgbGrid_Group\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.KB13829_IgbGrid_Group.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.KB13829_IgbGrid_Group.props",
+      "PackagePath": "build\\KB13829_IgbGrid_Group.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.KB13829_IgbGrid_Group.props",
+      "PackagePath": "buildMultiTargeting\\KB13829_IgbGrid_Group.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.KB13829_IgbGrid_Group.props",
+      "PackagePath": "buildTransitive\\KB13829_IgbGrid_Group.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

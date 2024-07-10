@@ -1,0 +1,51 @@
+﻿<div style="max-width: 900px; margin: auto; padding: 24px; display: flex; flex-direction: column; gap: 24px;">
+    <IgbGrid Data="_people"
+             Height="600px"
+             Width="100%"
+             PrimaryKey="@nameof(Person.Id)"
+             AutoGenerate="false"
+             GroupingExpressions="GroupingExpression1"             
+             ShowGroupArea="false"
+             SummaryCalculationMode="GridSummaryCalculationMode.ChildLevelsOnly">
+        <IgbColumn Field="@nameof(Person.Name)" Header="氏名" Width="auto"></IgbColumn>
+        <IgbColumn Field="@nameof(Person.SalesDivision)" Header="営業部門"  Width="auto"></IgbColumn>
+        <IgbColumn Field="@nameof(Person.NumberOfDeals)" Header="成約件数" DataType="GridColumnDataType.Number" HasSummary="true"></IgbColumn>
+        <IgbColumn Field="@nameof(Person.Revenue)" Header="売上" DataType="GridColumnDataType.Number" HasSummary="true"></IgbColumn>
+        <IgbColumn Field="@nameof(Person.RevenueTarget)" Header="売上目標" DataType="GridColumnDataType.Number" HasSummary="true"></IgbColumn>
+    </IgbGrid>
+</div>
+
+@code {
+#pragma warning disable BL0005
+    public IgbGroupingExpression[] GroupingExpression1 = new IgbGroupingExpression[1]
+    {
+        new IgbGroupingExpression(){ FieldName = "SalesDivision", Dir= SortingDirection.Asc }
+    };
+#pragma warning restore BL0005
+
+    public class Person
+    {
+        public int Id { get; set; }
+        public string? Name { get; set; }
+        public string? SalesDivision { get; set; }
+        public int NumberOfDeals { get; set; }
+        public int Revenue { get; set; }
+        public int RevenueTarget { get; set; }
+    }
+
+    private List<Person> _people = new()
+    { 
+        new() { Id = 1, Name = "Bob", SalesDivision = "営業１課", NumberOfDeals = 30, Revenue = 85, RevenueTarget = 100 },
+        new() { Id = 2, Name = "Alice", SalesDivision = "営業１課", NumberOfDeals = 25, Revenue = 75, RevenueTarget = 90 },
+        new() { Id = 3, Name = "John", SalesDivision = "営業２課", NumberOfDeals = 40, Revenue = 90, RevenueTarget = 110 },
+        new() { Id = 4, Name = "Emily", SalesDivision = "営業２課", NumberOfDeals = 35, Revenue = 80, RevenueTarget = 95 },
+        new() { Id = 5, Name = "David", SalesDivision = "営業２課", NumberOfDeals = 28, Revenue = 70, RevenueTarget = 85 },
+        new() { Id = 6, Name = "Sarah", SalesDivision = "営業３課", NumberOfDeals = 32, Revenue = 88, RevenueTarget = 105 },
+        new() { Id = 7, Name = "Michael", SalesDivision = "営業３課", NumberOfDeals = 45, Revenue = 95, RevenueTarget = 120 },
+        new() { Id = 8, Name = "Jessica", SalesDivision = "営業３課", NumberOfDeals = 29, Revenue = 78, RevenueTarget = 100 },
+        new() { Id = 9, Name = "Anna", SalesDivision = "営業１課", NumberOfDeals = 31, Revenue = 82, RevenueTarget = 98 },
+        new() { Id = 10, Name = "Tom", SalesDivision = "営業１課", NumberOfDeals = 27, Revenue = 76, RevenueTarget = 89 },
+        new() { Id = 11, Name = "Peter", SalesDivision = "営業２課", NumberOfDeals = 38, Revenue = 88, RevenueTarget = 105 },
+        new() { Id = 12, Name = "Lucy", SalesDivision = "営業２課", NumberOfDeals = 34, Revenue = 79, RevenueTarget = 92 },
+    };
+}

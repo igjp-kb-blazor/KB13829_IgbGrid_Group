@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\KB13829_IgbGrid_Group.props" />
+</Project>
